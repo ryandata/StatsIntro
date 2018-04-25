@@ -116,6 +116,7 @@ plot(my_reg_multi)
 # Bayesian Computation
 
 install.packages("rstan", dependencies = TRUE)
+library(rstan)
 rstan_options(auto_write = TRUE)
 
 #plot beta densities
