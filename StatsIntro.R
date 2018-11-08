@@ -7,6 +7,7 @@
 
 # install packages (this may take a while)
 install.packages("psych", dependencies=TRUE)
+install.packages("tabplot", dependencies=TRUE)
 
 # Card draw
 pclub<-0.25
