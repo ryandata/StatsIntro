@@ -6,10 +6,8 @@
 # 2018-11-08
 
 # set version of R to 3.4.4 in Rstudio.cloud (top right pulldown)
-# install packages (this will take a while)
+# install packages (this may take a while)
 install.packages("psych", dependencies=TRUE)
-install.packages("",dependencies=TRUE)
-install.packages("rstan", dependencies=TRUE)
 
 # Card draw
 pclub<-0.25
@@ -120,6 +118,7 @@ plot(my_reg_multi)
 
 
 # Bayesian Computation
+# https://rstudio.cloud/project/56157
 
 install.packages("rstan", dependencies = TRUE)
 library(rstan)
