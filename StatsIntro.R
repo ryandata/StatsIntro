@@ -5,7 +5,6 @@
 # Executive Education Mini-MBA Course
 # 2018-11-08
 
-# set version of R to 3.4.4 in Rstudio.cloud (top right pulldown)
 # install packages (this may take a while)
 install.packages("psych", dependencies=TRUE)
 
