@@ -5,6 +5,12 @@
 # Executive Education Mini-MBA Course
 # 2018-11-08
 
+# set version of R to 3.4.4 in Rstudio.cloud (top right pulldown)
+# install packages (this will take a while)
+install.packages("psych", dependencies=TRUE)
+install.packages("",dependencies=TRUE)
+install.packages("rstan", dependencies=TRUE)
+
 # Card draw
 pclub<-0.25
 for (i in 1:2)
@@ -27,7 +33,7 @@ precise_club<-function(n)
 {
   final_prob=1
   for (i in 1:n)
-    final_prob<-final_prob*((13-i)/(53-i))
+    final_prob<-final_prob*((14-i)/(53-i))
   final_prob
 }
 
