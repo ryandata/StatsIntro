@@ -60,7 +60,6 @@ mysd<-c(sd(pricedata$Barry.Price), sd(pricedata$Mary.Price))
 mysd
 
 # psych library is a useful shortcut
-install.packages("psych",dependencies = TRUE)
 library(psych)
 describe(pricedata)
 
@@ -82,7 +81,6 @@ celldata
 summary(celldata)
 describe(celldata)
 
-install.packages("tabplot", dependencies = TRUE)
 library(tabplot)
 tableplot(celldata)
 
@@ -107,7 +105,6 @@ plot(my_reg_pressure)
 #multivariate regression
 
 cor(celldata$Pressure, celldata$Wind_Speed)
-install.packages("lattice", dependencies = TRUE)
 library(lattice)
 splom(celldata)
 splom(celldata[,-1])
@@ -120,7 +117,7 @@ plot(my_reg_multi)
 # Bayesian Computation
 # https://rstudio.cloud/project/56157
 
-install.packages("rstan", dependencies = TRUE)
+# install.packages("rstan", dependencies = TRUE)
 library(rstan)
 rstan_options(auto_write = TRUE)
 
