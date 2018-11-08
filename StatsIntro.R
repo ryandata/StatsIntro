@@ -3,7 +3,7 @@
 # Rutgers University
 # Prepared for Data-Driven Management
 # Executive Education Mini-MBA Course
-# 2018-04-25
+# 2018-11-08
 
 # Card draw
 pclub<-0.25
