@@ -3,11 +3,14 @@
 # Rutgers University
 # Prepared for Data-Driven Management
 # Executive Education Mini-MBA Course
-# 2018-11-08
+# 2019-05-15
 
 # install packages (this may take a while)
 install.packages("psych", dependencies=TRUE)
 install.packages("tabplot", dependencies=TRUE)
+install.packages("lattice", dependencies=TRUE)
+install.packages("rstan", dependencies=TRUE)
+install.packages("ggplot2", dependencies = TRUE)
 
 # Card draw
 pclub<-0.25
@@ -85,6 +88,7 @@ library(tabplot)
 tableplot(celldata)
 
 #linear regression on Wind Speed
+library(lattice)
 
 cor(celldata$Bad_Calls, celldata$Wind_Speed)
 plot(celldata$Bad_Calls~celldata$Wind_Speed)
@@ -92,11 +96,14 @@ plot(celldata$Bad_Calls~celldata$Wind_Speed)
 my_reg_wind<-lm(Bad_Calls ~ Wind_Speed, data=celldata)
 summary(my_reg_wind)
 plot(my_reg_wind)
+xyplot(celldata$Bad_Calls~celldata$Wind_Speed, type=c("p","r"))
 
 #linear regression on Pressure
 
 cor(celldata$Bad_Calls, celldata$Pressure)
 plot(celldata$Bad_Calls~celldata$Pressure)
+xyplot(celldata$Bad_Calls~celldata$Pressure, type=c("p","r"))
+
 
 my_reg_pressure<-lm(Bad_Calls ~ Pressure, data=celldata)
 summary(my_reg_pressure)
@@ -105,7 +112,6 @@ plot(my_reg_pressure)
 #multivariate regression
 
 cor(celldata$Pressure, celldata$Wind_Speed)
-library(lattice)
 splom(celldata)
 splom(celldata[,-1])
 
